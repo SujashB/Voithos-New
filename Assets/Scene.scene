@@ -602,6 +602,29 @@
     - !<own> eb3bd3a3-0acd-4e44-b29e-53eba9e8f52d
   Components:
     []
+- !<ScriptComponent/2383b126-4b74-4eaf-8dc6-f18ce75dd88b>
+  PrefabRemaps:
+    []
+  Name: ClaudeSynthesizer
+  Enabled: true
+  ScriptAsset: !<reference> 2b517c5e-1fb8-4fef-93d4-e4b681b1ad0a
+  ScriptInputsDefault:
+    enableDebugMode: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      cameraTexture: !<reference.Texture> 996c6f4e-b2ad-4117-9e3e-3db82e6e97f5
+      statusText: !<reference.Text> 76c32313-9154-44d0-9ae4-0f8d31a0d859
+      speechToTextScript: !<reference.ScriptComponent> 62ac67d5-8d05-4d08-8c6b-7c1a3e5fd42b
+      groqAnalyzerScript: !<reference.ScriptComponent> 8589d4a4-ac88-41c6-aac7-979d124f8b72
+      rekaEmotionScript: !<reference.ScriptComponent> c4f6fa50-eab5-41bd-a0d3-460733a90444
+      analysisInterval: !<float> 2.000000
+      claudeApiKey: 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
+      enableDebugMode: true
+  ScriptTypes:
+    "":
+      {}
 - !<Text/2595c4ba-455f-4b82-b26b-95a869602d24>
   PrefabRemaps:
     []
@@ -1067,7 +1090,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 7.649498, z: 1.000000}
+    Position: {x: 0.000000, y: 6.845041, z: 1.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
@@ -1516,7 +1539,7 @@
   ScriptInputs:
     "":
       autoShowHide: false
-      innerSize: !<Vec2> {x: 15.000000, y: 1.000000}
+      innerSize: !<Vec2> {x: 10.000000, y: 1.000000}
       border: !<float> 2.000000
       constantPadding: !<Vec2> {x: 0.000000, y: 0.000000}
       allowScaling: false
@@ -1618,6 +1641,21 @@
     - !<own> 69ca7d87-1333-4925-8b59-4c90aeb0bb0a
   Components:
     []
+- !<SceneObject/6cae1edd-715e-435f-9ce3-ef43115a10b6>
+  PrefabRemaps:
+    []
+  Name: ClaudeSynthesizer
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 2383b126-4b74-4eaf-8dc6-f18ce75dd88b
 - !<SceneObject/6edd6a10-c6d7-4279-8407-d88b475d3c73>
   PrefabRemaps:
     []
@@ -1835,6 +1873,21 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/748c883b-71d0-41bf-a30a-196bed645c96>
+  PrefabRemaps:
+    []
+  Name: GroqSceneAnalyzer
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 8589d4a4-ac88-41c6-aac7-979d124f8b72
 - !<SceneObject/764d951d-7c7b-4a93-98bf-18baacf60e6b>
   PrefabRemaps:
     []
@@ -1877,13 +1930,10 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: |-
+  Text: |+
     -talk about how hiking, the person has a hiking instragram page
     -the quadratic formula was made in 1967
-    -talk about how hiking, the person has a hiking instragram page
-    -the quadratic formula was made in 1967
-    -talk about how hiking, the person has a hiking instragram page
-    -the quadratic formula was made in 1967
+    
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -2014,6 +2064,8 @@
     - !<own> 2b73dbfc-15b2-46ee-8a75-4e56c9dbcdad
     - !<own> fe128032-6381-4a82-95a9-d343da98d893
     - !<own> aeeb2777-d77e-47a4-a86b-cd7770da1b38
+    - !<own> 748c883b-71d0-41bf-a30a-196bed645c96
+    - !<own> 6cae1edd-715e-435f-9ce3-ef43115a10b6
   Components:
     - !<own> 32f2a710-c9bd-442d-b34a-68b173d1d432
 - !<SceneObject/7d330596-072d-4080-b6a5-2013263c8648>
@@ -2074,6 +2126,27 @@
   ScriptInputs:
     "":
       uiImage: !<reference.Image> 9a041840-fea4-4eba-a83e-6811ca3aacbd
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/8589d4a4-ac88-41c6-aac7-979d124f8b72>
+  PrefabRemaps:
+    []
+  Name: GroqSceneAnalyzer
+  Enabled: true
+  ScriptAsset: !<reference> a8969fa5-d721-463f-add5-80a32cb076f5
+  ScriptInputsDefault:
+    analysisInterval: true
+    enableDebugMode: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      cameraTexture: !<reference.Texture> 996c6f4e-b2ad-4117-9e3e-3db82e6e97f5
+      sceneText: !<reference.Text> 8ad7bfd3-1992-4aa1-86cf-1bad60f49c95
+      analysisInterval: !<float> 5.000000
+      groqApiKey: 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
+      enableDebugMode: true
   ScriptTypes:
     "":
       {}
@@ -2645,7 +2718,7 @@
   PrefabRemaps:
     []
   Name: camera_anaylsis
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -2.997691, y: -4.128334, z: -112.682190}

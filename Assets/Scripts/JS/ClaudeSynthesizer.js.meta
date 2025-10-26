@@ -1,0 +1,56 @@
+- !<AssetImportMetadata/e57eb9e0-abfa-4df6-b611-52302a32ea85>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 2b517c5e-1fb8-4fef-93d4-e4b681b1ad0a
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 2b517c5e-1fb8-4fef-93d4-e4b681b1ad0a
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 7925d6bc-53dc-462e-8410-c5aea9967ffd
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/7925d6bc-53dc-462e-8410-c5aea9967ffd>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 595e798c-23f1-47f9-a542-b8c4528b39df
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    analysisInterval: false
+    cameraTexture: false
+    claudeApiKey: false
+    enableDebugMode: false
+    groqAnalyzerScript: false
+    rekaEmotionScript: false
+    speechToTextScript: false
+    statusText: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - cameraTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      statusText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      speechToTextScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      groqAnalyzerScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      rekaEmotionScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      analysisInterval: !<float> 5.000000
+      claudeApiKey: ""
+      enableDebugMode: true
+  ScriptTypes:
+    -
+      {}

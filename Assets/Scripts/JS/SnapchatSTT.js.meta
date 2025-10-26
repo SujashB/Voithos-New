@@ -27,9 +27,11 @@
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
     audioListener: false
+    conversationStorage: false
     enableContinuousListening: false
     outputText: false
     statusText: false
+    transcriptFile: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -43,6 +45,8 @@
       outputText: !<reference.Text> 00000000-0000-0000-0000-000000000000
       statusText: !<reference.Text> 00000000-0000-0000-0000-000000000000
       enableContinuousListening: false
+      transcriptFile: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      conversationStorage: !<reference.Text> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}

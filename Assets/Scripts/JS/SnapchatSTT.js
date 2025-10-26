@@ -2,6 +2,8 @@
 // @input Component.Text outputText {"hint":"Text component to display transcription"}
 // @input Component.Text statusText {"hint":"Optional status text component"}
 // @input bool enableContinuousListening {"hint":"Enable continuous listening mode"}
+// @input Component.Text transcriptFile {"hint":"Text component to act as a text file (can be hidden)"}
+// @input Component.Text conversationStorage {"hint":"Text component to store all conversation (for Claude to read)"}
 
 print("========================================");
 print("🚀 SNAPCHAT SPEECH-TO-TEXT - LOADING");
@@ -11,6 +13,12 @@ print("========================================");
 // VoiceML Module
 let voiceMLModule;
 let isListening = false;
+
+// Initialize API object
+script.api = {};
+
+// Storage state - stores all transcripts
+let currentTranscript = "";
 
 script.createEvent("OnStartEvent").bind(function() {
     print("========================================");
@@ -92,6 +100,9 @@ function startListening() {
                 
                 if (script.outputText) {
                     if (eventData.isFinalTranscription) {
+                        // Store in conversation history
+                        addToConversationHistory(eventData.transcription);
+                        
                         script.outputText.text = "✅ " + eventData.transcription;
                         print("========================================");
                         print("🎯 FINAL: " + eventData.transcription);
@@ -158,6 +169,53 @@ script.stopListening = function() {
             script.statusText.text = "🛑 Stopped";
         }
     }
+};
+
+// Add to conversation history - SIMPLE VERSION like AI Playground
+function addToConversationHistory(transcription) {
+    print("💬 [STT] Storing transcription: '" + transcription + "'");
+    
+    // Simply append to the stored transcript string
+    if (currentTranscript.length > 0) {
+        currentTranscript += " " + transcription;
+    } else {
+        currentTranscript = transcription;
+    }
+    
+    print("💬 [STT] Total transcript length: " + currentTranscript.length + " characters");
+    
+    // ALSO save to persistent storage (acts like a database)
+    if (global.persistentStorageSystem) {
+        const store = global.persistentStorageSystem.store;
+        
+        // Save the full transcript to persistent storage
+        store.putString("speechTranscript", currentTranscript);
+        print("💾 [STT] Saved to database: " + currentTranscript.length + " chars");
+        
+        // ALSO save a timestamp for this transcript
+        store.putFloat("lastTranscriptTime", getTime());
+        
+        // Save the count of how many transcriptions we've stored
+        const currentCount = store.getInt("transcriptCount") || 0;
+        store.putInt("transcriptCount", currentCount + 1);
+        print("💾 [STT] Entry #" + (currentCount + 1));
+    } else {
+        print("⚠️  [STT] Persistent storage not available");
+    }
+    
+    // ALSO write to Text component (acts like a .txt file)
+    if (script.transcriptFile) {
+        script.transcriptFile.text = currentTranscript;
+        print("📄 [STT] Written to text file component: " + currentTranscript.length + " characters");
+    } else {
+        print("⚠️  [STT] transcriptFile text component not connected");
+    }
+}
+
+// Public API for other scripts - SIMPLE like AI Playground
+script.api.getCurrentText = function() {
+    print("📖 [STT] getCurrentText() called - returning " + currentTranscript.length + " characters of transcript");
+    return currentTranscript;
 };
 
 print("========================================");
