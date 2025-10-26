@@ -1,20 +1,20 @@
-- !<AssetImportMetadata/d91123d8-6a31-4c32-b76f-f391438bca36>
+- !<AssetImportMetadata/1ae0019f-efb9-4074-92d7-152bddf85c07>
   ImportedAssetIds:
-    JavaScriptAsset: !<reference> 438a5710-1b56-4b2d-9acb-ffb50aa1bd46
+    JavaScriptAsset: !<reference> fda75eba-8dd3-4220-baac-cbfc9d3282a5
   ImporterName: JavaScriptAssetImporter
-  PrimaryAsset: !<reference> 438a5710-1b56-4b2d-9acb-ffb50aa1bd46
+  PrimaryAsset: !<reference> fda75eba-8dd3-4220-baac-cbfc9d3282a5
   PackageType: NotAPackage
   LegacyPackagePolicy: ~
   ExtraData:
     {}
   AssetDataMap:
-    JavaScriptAsset: !<own> fde57d52-52e4-4535-8699-4a3bab55ebb2
+    JavaScriptAsset: !<own> b789ab36-7696-426a-a574-bd6a48161f58
   DependentFiles:
     []
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<ScriptAssetData/fde57d52-52e4-4535-8699-4a3bab55ebb2>
+- !<ScriptAssetData/b789ab36-7696-426a-a574-bd6a48161f58>
   SvgIcon: ""
   SetupScript:
     code: ""
@@ -22,12 +22,17 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: eee2ac31-838a-4fde-9b93-14a05719b414
+  ComponentUid: 7fc10172-44ca-4563-8cae-70bb2e72d321
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
+    claudeApiKey: false
+    claudeModel: false
+    enableDebug: false
+    minInterval: false
+    rekaEmotionScript: false
     statusText: false
-    text: false
+    suggestionText: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -37,8 +42,13 @@
   Attachments:
     []
   DefaultScriptInputs:
-    - text: !<reference.Text> 00000000-0000-0000-0000-000000000000
+    - suggestionText: !<reference.Text> 00000000-0000-0000-0000-000000000000
       statusText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      rekaEmotionScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      claudeApiKey: ""
+      claudeModel: claude-3-5-sonnet-20241022
+      minInterval: !<float> 5.000000
+      enableDebug: true
   ScriptTypes:
     -
       {}
