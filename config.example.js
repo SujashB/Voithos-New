@@ -17,6 +17,10 @@ const API_KEYS = {
     // Get from: https://tavily.com/
     TAVILY_API_KEY: "tvly-your-key-here",
     
+    // Groq API Key (for visual scene analysis)
+    // Get from: https://console.groq.com/
+    GROQ_API_KEY: "gsk-your-key-here",
+    
     // Deepgram API Key (optional)
     DEEPGRAM_API_KEY: "your-deepgram-key-here",
     

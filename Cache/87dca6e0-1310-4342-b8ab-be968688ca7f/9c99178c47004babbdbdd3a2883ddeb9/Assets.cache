@@ -1660,7 +1660,7 @@
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -29.237288, y: 148.741959, z: 3.222674}
-    Rotation: {x: -111.574242, y: 32.842445, z: 24.625263}
+    Rotation: {x: -111.574242, y: 32.842442, z: 24.625263}
     Scale: {x: 0.190565, y: 0.193860, z: 0.226329}
     HasSegmentScaleCompensation: false
   Children:
@@ -1908,7 +1908,7 @@
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -10.991496, y: -39.168446, z: -2.713845}
-    Rotation: {x: -111.574242, y: 32.842445, z: 24.625263}
+    Rotation: {x: -111.574242, y: 32.842442, z: 24.625263}
     Scale: {x: 0.190565, y: 0.193860, z: 0.226329}
     HasSegmentScaleCompensation: false
   Children:
@@ -2334,7 +2334,7 @@
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -27.555578, y: 126.987015, z: 2.425066}
-    Rotation: {x: -111.574242, y: 32.842445, z: 24.625263}
+    Rotation: {x: -111.574242, y: 32.842442, z: 24.625263}
     Scale: {x: 0.190565, y: 0.193860, z: 0.226329}
     HasSegmentScaleCompensation: false
   Children:

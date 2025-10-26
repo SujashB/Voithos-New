@@ -1231,6 +1231,21 @@
     - !<own> ae40155d-c43d-48f6-bba8-54fbc4af0f5b
   Components:
     []
+- !<SceneObject/52506543-e1c6-4a40-aca1-3d9df32f8e6b>
+  PrefabRemaps:
+    []
+  Name: TavilySuggestions
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 88d50385-6757-462a-ac91-36167420c6d7
 - !<SceneObject/593d9da3-bac7-41ea-b24d-f7286f99af82>
   PrefabRemaps:
     []
@@ -1757,6 +1772,34 @@
     - !<own> 66f20a9d-1694-49da-a177-3d8ecf0df69e
   Components:
     []
+- !<ScriptComponent/6f60675f-3f63-4130-829a-5af83e1ced03>
+  PrefabRemaps:
+    []
+  Name: ClaudeIntegration
+  Enabled: true
+  ScriptAsset: !<reference> 371c3169-727b-4e76-931f-4e4f9efa4f53
+  ScriptInputsDefault:
+    statusText: true
+    claudeModel: true
+    minInterval: true
+    enableDebug: true
+    maxHistorySize: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      suggestionText: !<reference.Text> 76c32313-9154-44d0-9ae4-0f8d31a0d859
+      statusText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      rekaEmotionScript: !<reference.ScriptComponent> c4f6fa50-eab5-41bd-a0d3-460733a90444
+      groqSceneAnalyzerScript: !<reference.ScriptComponent> fd736201-427b-45ae-b250-32409a4c3c7d
+      claudeApiKey: ""
+      claudeModel: claude-haiku-4-5
+      minInterval: !<float> 5.000000
+      enableDebug: true
+      maxHistorySize: 6
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/6fa24305-adf4-4c18-9076-5b765e4bdd2e>
   PrefabRemaps:
     []
@@ -1830,13 +1873,8 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: |-
-    -talk about how hiking, the person has a hiking instragram page
-    -the quadratic formula was made in 1967
-    -talk about how hiking, the person has a hiking instragram page
-    -the quadratic formula was made in 1967
-    -talk about how hiking, the person has a hiking instragram page
-    -the quadratic formula was made in 1967
+  Text: |+
+    
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -1966,6 +2004,9 @@
     - !<own> 323dbb43-fb63-43f4-801d-93dbdd02934c
     - !<own> 2b73dbfc-15b2-46ee-8a75-4e56c9dbcdad
     - !<own> fe128032-6381-4a82-95a9-d343da98d893
+    - !<own> c34e600e-6c81-4242-a7af-fc400fb71788
+    - !<own> 52506543-e1c6-4a40-aca1-3d9df32f8e6b
+    - !<own> a20535c0-4061-4d05-b7f1-df80afe3939e
   Components:
     []
 - !<SceneObject/7d330596-072d-4080-b6a5-2013263c8648>
@@ -2185,6 +2226,38 @@
     []
   Components:
     - !<own> aa596a97-9d02-4c5e-b187-31655b03bcda
+- !<ScriptComponent/88d50385-6757-462a-ac91-36167420c6d7>
+  PrefabRemaps:
+    []
+  Name: TavilySuggestions
+  Enabled: true
+  ScriptAsset: !<reference> ced899c6-0bf1-46df-893f-bb9407ca81a7
+  ScriptInputsDefault:
+    webResultsText: true
+    statusText: true
+    claudeSuggestionText: true
+    claudeIntegrationScript: true
+    tavilyApiKey: true
+    maxResults: true
+    enableDebug: true
+    systemPrompt: true
+    autoRewriteQuery: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      webResultsText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      statusText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      claudeSuggestionText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      claudeIntegrationScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      tavilyApiKey: ""
+      maxResults: 3
+      enableDebug: true
+      systemPrompt: "Provide factual and up-to-date information related to: "
+      autoRewriteQuery: true
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/89e702dd-5391-409f-bcb3-b581c97c8539>
   PrefabRemaps:
     []
@@ -2491,6 +2564,21 @@
     CapitalizationOverride: None
   DepthTest: false
   TwoSided: false
+- !<SceneObject/a20535c0-4061-4d05-b7f1-df80afe3939e>
+  PrefabRemaps:
+    []
+  Name: GroqSceneAnalyzer
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> fd736201-427b-45ae-b250-32409a4c3c7d
 - !<SceneObject/a5358b97-242c-4838-bc42-b7813547af06>
   PrefabRemaps:
     []
@@ -2956,6 +3044,21 @@
     []
   Components:
     - !<own> 52102164-ce46-41b8-8af8-a0d2f7c7d66a
+- !<SceneObject/c34e600e-6c81-4242-a7af-fc400fb71788>
+  PrefabRemaps:
+    []
+  Name: ClaudeIntegration
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 6f60675f-3f63-4130-829a-5af83e1ced03
 - !<ScriptComponent/c42ecdd0-2586-433f-958c-9c9e8b5b5af7>
   PrefabRemaps:
     []
@@ -3877,6 +3980,29 @@
     - !<own> 8497a742-14ba-4d84-8115-3af6b59931e0
   Components:
     []
+- !<ScriptComponent/fd736201-427b-45ae-b250-32409a4c3c7d>
+  PrefabRemaps:
+    []
+  Name: GroqSceneAnalyzer
+  Enabled: true
+  ScriptAsset: !<reference> 902b78e4-2af5-483b-9e3d-9178eb20689f
+  ScriptInputsDefault:
+    sceneText: true
+    analysisInterval: true
+    groqApiKey: true
+    enableDebugMode: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      cameraTexture: !<reference.Texture> 996c6f4e-b2ad-4117-9e3e-3db82e6e97f5
+      sceneText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      analysisInterval: !<float> 5.000000
+      groqApiKey: ""
+      enableDebugMode: true
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/fda7a93e-a3ee-4463-b2d8-1f0f60981489>
   PrefabRemaps:
     []

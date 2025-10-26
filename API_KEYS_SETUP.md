@@ -31,7 +31,13 @@ This project uses several AI services that require API keys. **DO NOT commit you
 - **Used in:** DeepgramSTT.js (if enabled)
 - **Format:** Custom Deepgram format
 
-### 5. **OpenAI API Key** (optional - for TTS/Vision)
+### 5. **Groq API Key** (for visual scene analysis)
+- **Get it from:** https://console.groq.com/
+- **Used in:** GroqSceneAnalyzer.js
+- **Format:** `gsk_...`
+- **Cost:** Free tier available, very fast inference
+
+### 6. **OpenAI API Key** (optional - for TTS/Vision)
 - **Get it from:** https://platform.openai.com/
 - **Used in:** TextToSpeechOpenAI.js, VisionOpenAI_DALLE.js
 - **Format:** `sk-...`
@@ -46,9 +52,13 @@ This project uses several AI services that require API keys. **DO NOT commit you
 2. In the **Objects Panel**, select the script component:
    - For Claude: Select object with **ClaudeIntegration** script
    - For Reka: Select object with **RekaEmotionAnalyzer** script
+   - For Groq: Select object with **GroqSceneAnalyzer** script
+   - For Tavily: Select object with **TavilySuggestions** script
 3. In the **Inspector Panel**, find the API Key field:
    - **Claude Api Key** field
    - **Reka Api Key** field
+   - **Groq Api Key** field
+   - **Tavily Api Key** field
 4. **Paste your API key** directly into the field
 5. **Save the project**
 
@@ -90,6 +100,7 @@ This project uses several AI services that require API keys. **DO NOT commit you
 | Claude | ClaudeIntegration.js | `claudeApiKey` | Required |
 | Reka | RekaEmotionAnalyzer.js | `rekaApiKey` | Required |
 | Tavily | TavilySuggestions.js | `tavilyApiKey` | Required |
+| Groq | GroqSceneAnalyzer.js | `groqApiKey` | Required |
 | Deepgram | DeepgramSTT.js | N/A (using Snapchat STT) | Optional |
 | OpenAI | TextToSpeechOpenAI.js | N/A | Optional |
 
