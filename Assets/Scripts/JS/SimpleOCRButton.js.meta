@@ -1,0 +1,50 @@
+- !<AssetImportMetadata/bc16e3cb-8dbe-4cd4-965f-83e73ea6ddc6>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 4d809442-96d8-4244-a33b-a3a4e9bcb268
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 4d809442-96d8-4244-a33b-a3a4e9bcb268
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 12d49146-59c9-4801-b721-1356a5d46545
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/12d49146-59c9-4801-b721-1356a5d46545>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 7c9ad970-e9e2-4af8-8beb-ac1f99b3509c
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    cameraTexture: false
+    enableDebugMode: false
+    geminiApiKey: false
+    outputText: false
+    statusText: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - cameraTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      outputText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      statusText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      geminiApiKey: ""
+      enableDebugMode: true
+  ScriptTypes:
+    -
+      {}
