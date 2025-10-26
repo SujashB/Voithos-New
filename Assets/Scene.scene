@@ -609,6 +609,7 @@
   Enabled: true
   ScriptAsset: !<reference> 2b517c5e-1fb8-4fef-93d4-e4b681b1ad0a
   ScriptInputsDefault:
+    claudeApiKey: true
     enableDebugMode: true
   ScriptTypesDefault:
     {}
@@ -620,7 +621,7 @@
       groqAnalyzerScript: !<reference.ScriptComponent> 8589d4a4-ac88-41c6-aac7-979d124f8b72
       rekaEmotionScript: !<reference.ScriptComponent> c4f6fa50-eab5-41bd-a0d3-460733a90444
       analysisInterval: !<float> 2.000000
-      claudeApiKey: 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
+      claudeApiKey: ""
       enableDebugMode: true
   ScriptTypes:
     "":
