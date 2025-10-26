@@ -2137,6 +2137,7 @@
   ScriptAsset: !<reference> a8969fa5-d721-463f-add5-80a32cb076f5
   ScriptInputsDefault:
     analysisInterval: true
+    groqApiKey: true
     enableDebugMode: true
   ScriptTypesDefault:
     {}
@@ -2145,7 +2146,7 @@
       cameraTexture: !<reference.Texture> 996c6f4e-b2ad-4117-9e3e-3db82e6e97f5
       sceneText: !<reference.Text> 8ad7bfd3-1992-4aa1-86cf-1bad60f49c95
       analysisInterval: !<float> 5.000000
-      groqApiKey: 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
+      groqApiKey: ""
       enableDebugMode: true
   ScriptTypes:
     "":
@@ -2701,6 +2702,7 @@
   ScriptAsset: !<reference> d73cdf1e-2a36-4d1d-a2ca-30f412e32ca2
   ScriptInputsDefault:
     analysisInterval: true
+    geminiApiKey: true
     enableDebugMode: true
   ScriptTypesDefault:
     {}
@@ -2709,7 +2711,7 @@
       cameraTexture: !<reference.Texture> 996c6f4e-b2ad-4117-9e3e-3db82e6e97f5
       sceneText: !<reference.Text> 8ad7bfd3-1992-4aa1-86cf-1bad60f49c95
       analysisInterval: !<float> 10.000000
-      geminiApiKey: AIzaSyBwclXl8ETZ7-Ut29OHL_1nF0UNruM-vYI
+      geminiApiKey: ""
       enableDebugMode: true
   ScriptTypes:
     "":
