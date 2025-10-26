@@ -10,7 +10,7 @@ let isProcessing = false;
 let lastAnalysisTime = 0;
 let currentEmotion = "Neutral";
 let emotionHistory = [];
-const MAX_HISTORY = 5;
+const MAX_HISTORY = 1; // Reduced from 5 to 3 for more sensitivity
 
 // Emotion emoji mapping
 const EMOTION_EMOJIS = {
@@ -138,13 +138,13 @@ async function sendToRekaAPI(base64Image) {
                     },
                     {
                         type: "text",
-                        text: "Analyze the primary emotion visible in this image. Respond with ONLY ONE of these emotions: Happy, Sad, Angry, Surprised, Fearful, Disgusted, or Neutral. Provide only the emotion word, nothing else."
+                        text: "Analyze the primary emotion visible in this image. Respond with ONLY ONE of these emotions: Happy, Sad, Angry, Surprised, Fearful, Disgusted, or Neutral. Provide only the emotion word, nothing else.",
                     }
                 ]
             }
         ],
         model: "reka-core",
-        temperature: 0.3,
+        temperature: 0.5,
         max_tokens: 10
     };
     
@@ -264,7 +264,16 @@ function getSmoothedEmotion() {
         return "Neutral";
     }
     
-    // Count occurrences
+    // More sensitive: if we have 2+ readings, check for consecutive emotions
+    if (emotionHistory.length >= 2) {
+        const lastTwo = emotionHistory.slice(-2);
+        if (lastTwo[0] === lastTwo[1]) {
+            // Two consecutive same emotions = use that emotion
+            return lastTwo[0];
+        }
+    }
+    
+    // Fallback to majority rule (but with smaller history)
     const counts = {};
     for (let i = 0; i < emotionHistory.length; i++) {
         const emotion = emotionHistory[i];

@@ -164,9 +164,9 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: -8.594269, z: 1.000000}
+    Position: {x: 0.000000, y: -13.097304, z: 1.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 20.000000, y: 20.014288, z: 20.000000}
+    Scale: {x: 23.000000, y: 25.000000, z: 20.000000}
     HasSegmentScaleCompensation: false
   Children:
     []
@@ -1518,7 +1518,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: -0.110001, y: -11.715540, z: 1.000000}
+    Position: {x: -0.110001, y: -15.314340, z: 1.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
@@ -2299,7 +2299,7 @@
   Name: Image
   Enabled: true
   RenderOrder: 0
-  StretchMode: Fit
+  StretchMode: FillAndCut
   VerticalAlignment: Center
   HorizontalAlignment: Center
   MeshShadowMode: None
@@ -3122,7 +3122,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: -13.919475, z: 0.000000}
+    Position: {x: 0.000000, y: -18.060280, z: 0.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
@@ -3677,7 +3677,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: -14.831073, y: -23.984180, z: -118.000000}
+    Position: {x: -19.476368, y: -23.984180, z: -118.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
