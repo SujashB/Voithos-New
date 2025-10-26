@@ -105,21 +105,25 @@ function encodeTextureToBase64(texture) {
 async function sendToGroqAPI(base64Image) {
     print("🌐 [API] Preparing Groq API request...");
     
+    // Use Meta's latest Llama 4 Scout model - supports vision and super fast on Groq
+    const imageDataUri = `data:image/jpeg;base64,${base64Image}`;
+    const prompt = "Analyze this image and describe what you see. Include: objects, people, text, scene description, colors, and notable details. Keep it concise.";
+    
     const requestPayload = {
-        model: "llama-3.3-70b-versatile",
+        model: "meta-llama/llama-4-scout-17b-16e-instruct",
         messages: [
             {
                 role: "user",
                 content: [
                     {
-                        type: "image_url",
-                        image_url: {
-                            url: `data:image/jpeg;base64,${base64Image}`
-                        }
+                        type: "text",
+                        text: prompt
                     },
                     {
-                        type: "text",
-                        text: "Analyze this image and describe what you see. Include: objects, people, text, scene description, colors, and notable details. Keep it concise."
+                        type: "image_url",
+                        image_url: {
+                            url: imageDataUri
+                        }
                     }
                 ]
             }
